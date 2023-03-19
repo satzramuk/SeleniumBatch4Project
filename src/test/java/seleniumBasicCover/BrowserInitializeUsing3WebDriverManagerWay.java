@@ -1,5 +1,6 @@
 package seleniumBasicCover;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,10 +15,11 @@ public class BrowserInitializeUsing3WebDriverManagerWay {
 	public static void main(String[] args) {
 		//Webdriver Manager
 		
-       // WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");
+       // driver.findElement(By.partialLinkText("Log")
         System.out.println(driver.getTitle());
         driver.quit();
         
